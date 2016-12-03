@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int size = 14;
+
 int main (){
-int tipp[10][6]; //TODO:row of games
+int tipp[size][6]; //TODO:row of games
 char erg[6];
 int lsg[6];
 
-printf("Lotto Tippschein eingeben: ");
-	for(int i=0; i<10;i++){
+printf("Lotto Tippschein eingeben: \n");
+	for(int i=0; i<size;i++){
 		for(int j=0; j<6; j++){
 			scanf("%d", &tipp[i][j]);
 			printf("Zahl %d, ", j);
@@ -19,14 +21,14 @@ printf("Lotto Tippschein eingeben: ");
                         scanf("%d", &lsg[j]);
                         printf("Zahl %d, ", j);
                         printf("Ihre Zahl %d\n", lsg[j]);
-        erg[j]='y';
+        erg[j]='_';
 	}
 	printf("Ihre Gewinn Zahlen: \n");
 	for(int j=0; j<6; j++){
                         printf("Zahl %d, ", lsg[j]);
                 }
 	printf("\n");
-	for(int i=0;i<10;i++){
+	for(int i=0;i<size;i++){
 		for(int j=0; j<6; j++){
 			for (int k=0;k<6;k++){
 				if(lsg[k]==tipp[i][j]){
@@ -37,10 +39,10 @@ printf("Lotto Tippschein eingeben: ");
 		}
 		printf("\n");
 		for(int l=0; l<6; l++){
-                     printf("%c, ", erg[l]);
+                     printf("%c   ", erg[l]);
                 }
 		for(int l=0; l<6; l++){
-                     erg[l]='y';
+                     erg[l]='_';
                 }
 		printf("\n");
         }
