@@ -39,7 +39,6 @@ printf("Lotto Tippschein eingeben: \n");
 			for (int k=0;k<6;k++){
 				if(lsg[k]==tipp[i][j]){
 					erg[j][0] = 'x';
-					counter++;
 					}
                		}
 	       		printf("%d, ", tipp[i][j]);
@@ -60,8 +59,8 @@ printf("Lotto Tippschein eingeben: \n");
 			localctr++;
 		    }
 		}
-		if(localctr<=counter){
-			counter = 0;
+		if(localctr>=counter){
+			counter++;
 		}
 		for(int l=0; l<6; l++){
                      erg[l][0]='_';
