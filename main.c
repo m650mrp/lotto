@@ -46,7 +46,7 @@ printf("Lotto Tippschein eingeben: \n");
 		}
 		printf("\n");
 		for(int l=0; l<6; l++){
-                     printf("%c   ", erg[l]);
+                     printf("%c   ", erg[l][0]);
                 }
 
 		int len = sizeof(erg)/sizeof(erg[0]);
