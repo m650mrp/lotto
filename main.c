@@ -3,8 +3,6 @@
 #include <string.h>
 
 int size = 14;
-int strcmp(const char *str1, const char *str2);
-
 int main (){
 int tipp[size][6]; //TODO:row of games
 char *erg[6];
@@ -13,7 +11,7 @@ int counter = 0;
 
 for(int i=0;i<6;i++) {
 	erg[i] = malloc(2);
-	erg[i][1] = '_';
+	erg[i][1] = '\0';
 }
 
 printf("Lotto Tippschein eingeben: \n");
@@ -53,16 +51,16 @@ printf("Lotto Tippschein eingeben: \n");
 
 		int len = sizeof(erg)/sizeof(erg[0]);
 		int i;
-		int lcounter = 0;
+		int localctr = 0;
 
 		for(i = 0; i < len; ++i)
 		{
 		    if(!strcmp(erg[i], "x"))
 		    {
-			lcounter++;
+			localctr++;
 		    }
 		}
-		if(lcounter<=counter){
+		if(localctr<=counter){
 			counter = 0;
 		}
 		for(int l=0; l<6; l++){
@@ -71,7 +69,7 @@ printf("Lotto Tippschein eingeben: \n");
 		printf("\n");
         }
 	if(counter == 0){
-		printf("Leider keine richtige Zahl, bitte spielen Sieåöfter\n");
+		printf("Leider keine richtige Zahl, bitte spielen Sie öfter\n");
 	}else{
 		printf("Gewinn %d Herzlichen GlÜckwunsch!!!", counter);
 	}
