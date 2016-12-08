@@ -4,7 +4,7 @@
 
 int size = 14;
 int main (){
-int tipp[size][6]; //TODO:row of games
+int tipp[size][6];
 char *erg[6];
 int lsg[6];
 int counter = 0;
