@@ -70,6 +70,6 @@ printf("Lotto Tippschein eingeben: \n");
 	if(counter == 0){
 		printf("Leider keine richtige Zahl, bitte spielen Sie öfter\n");
 	}else{
-		printf("Gewinn %d richtige Zahlen. Herzlichen GlÜckwunsch!!!\n", counter);
+		printf("Gewinn, %d richtige Zahlen. Herzlichen GlÜckwunsch!!!\n", counter);
 	}
 }
