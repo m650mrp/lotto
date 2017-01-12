@@ -1,3 +1,3 @@
 #!/bin/bash
 gcc main.c
-cat spiel-2016-12-21.txt | ./a.out
+cat spiel-2017-01-11.txt | ./a.out
